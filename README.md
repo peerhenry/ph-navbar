@@ -1,0 +1,1 @@
+Just a simple html page with styling for a navbar.
