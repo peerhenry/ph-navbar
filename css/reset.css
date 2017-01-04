@@ -1,9 +1,9 @@
-/* RESET:
+/* Reset obtained from:
   http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 
-   Also added some from https://gist.github.com/anthonyshort/552543
+   Also added some stuff from https://gist.github.com/anthonyshort/552543
 */
 
 html, body, div, span, applet, object, iframe,
@@ -65,7 +65,7 @@ textarea
 	background:none;
 	line-height:1;
 	/* Browsers have different default form fonts */
-	font-size:13px;
+	font-size:17px;
 	font-family:Arial;
 }
 input:focus

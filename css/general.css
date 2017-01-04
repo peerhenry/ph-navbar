@@ -1,0 +1,47 @@
+/*
+PeerHenry 4-1-2017
+Some general styling.
+*/
+
+section, aside {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: .5rem;
+}
+
+h1{
+  font-size: 36px;
+}
+
+h2{
+  font-size: 32px;
+}
+
+h3{
+  font-size: 24px;
+}
+
+p{
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 14px 16px;
+  color: #ddd;
+  background-color: #222;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #777;
+}
+
+button:active{
+  outline: none;
+  background-color: #000;
+}
