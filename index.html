@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/reset.css">
@@ -12,33 +13,31 @@
   <div class="wrapper">
     <header>
       <nav>
+        <div>
+          <a href="#">Home</a>
+          <label for="nav"><i class="fa fa-bars" aria-hidden="true"></i></label>
+        </div>
+        <input type="checkbox" id="nav"/>
         <ul>
-          <li><a href="#">Home</a></li>
           <li><a href="#">File</a></li>
           <li><a href="#">Search</a></li>
           <li><a href="#">Contact</a></li>
-          <li class="rightli nav-icon">
-            <a href="#">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-            </a>
-          </li>
           <li class="rightli">
             <a href="http://www.github.com/peerhenry/ph-navbar" class="github-icon-link">
               <i class="fa fa-github fa-2x" aria-hidden="true"></i>
             </a>
           </li>
+          <li class="rightli"><a href="#">Login</a></li>
+          <li class="rightli"><a href="#">Sign Up</a></li>
           <li class="rightli">
             <form>
               <input type="text">
               <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
             </form>
           </li>
-          <li class="rightli"><a href="#">Login</a></li>
-          <li class="rightli"><a href="#">Sign Up</a></li>
         </ul>
       </nav>
     </header>
-
     <section>
       Here begins a section.
       <article>
@@ -71,7 +70,7 @@
 
   <footer>
     <div class="footer-content">
-      <p>Oh nice, a sticky footer : ) &copy; PeerHenry 2017</p>
+      <p>Oh nice, a sticky footer! You could put some copyright stuff in here like: &copy; PeerHenry 2017.</p>
     </div>
   </footer>
 

@@ -3,6 +3,10 @@ This stylesheet is loosely based on this guide:
 https://www.sitepoint.com/building-an-interactive-navigation-bar/
 */
 
+/* ==================================== */
+/* TAG STYLING */
+/* ==================================== */
+
 html, body{
   font-family: Verdana,sans-serif;
   font-size: 17px;
@@ -19,36 +23,43 @@ section, aside {
   padding: 20px 20px 20px 20px;
 }
 
+/* ==================================== */
+/* NAVBAR STYLING */
+/* ==================================== */
+
 /* Make the nav take up the whole body width, and give it some top and bottom margin space */
 nav {
   width: 100%;
   margin: 0;
   background-color: #222;
-}
-
-/* Make the list of links take up the whole width of the nav */
-nav ul {
-  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden; /* this is important: fills up remaining horizontal space. */
 }
 
-nav ul li {
+nav > a, nav div a, nav ul li {
   float: left;
+  background-color: #222;
 }
 
-nav ul li a {
+nav a, nav label {
   padding: 14px 16px;
   display: inline-block;
   background-color: #222;
   color: #ddd;
   text-align: center;
   text-decoration: none;
+  line-height: 17px;
 }
 
-nav ul li a:hover{
+nav div label{
+  display: none;
+  float: right;
+  cursor: pointer;
+}
+
+nav a:hover, nav label:hover{
   background-color: #555;
   color: #fff;
 }
@@ -58,9 +69,16 @@ nav ul li input{
   padding: 6px 8px;
   border-radius: 4px;
   width: 200px;
+  font-size: 14px;
 }
 
+nav input[type="checkbox"]{
+  display: none;
+}
+
+/* ==================================== */
 /* CLASSES */
+/* ==================================== */
 
 .rightli{
   float: right;
@@ -75,22 +93,53 @@ nav ul li input{
   height: 45px;
 }
 
-nav ul li.nav-icon{
-  display: none;
+/* ==================================== */
+/* MAKE NAVBAR RESPONSIVE */
+/* ==================================== */
+
+@keyframes dropdown {
+  from { transform: translateY(-300px); }
+  to { transform: translateY(-2px); }
 }
 
-/* MAKE NAVBAR RESPONSIVE */
-
-@media screen and (max-width:680px) {
-  nav ul li:not(:first-child) {display: none;}
-  nav ul li.nav-icon {
-    float: right;
+@media screen and (max-width:960px) {/*680*/
+  ul { 
+    display: none;
+  }
+  nav { 
+    background-color: transparent;
+  }
+  nav div { 
+    width: 100%;
+    background-color: #222;
     display: inline-block;
+  }
+  nav div label { display: inline-block; }
+  nav ul{
+    width: 100%;
+  }
+  nav ul li, nav ul li>a { width: 100%;}
+  nav ul li form input { width: calc(100% - 74px); margin-left: 4px}
+  nav ul li form a { width: auto;}
+
+  nav > input[type=checkbox]:checked ~ ul{
+    display: inline-block;
+    animation-name: dropdown;
+    animation-duration: 0.3s;
+    transform: translateY(-2px);
+  }
+
+  nav .github-icon-link{
+    display: none;
   }
 }
 
+/* ==================================== */
 /* DEBUG SECTION */
-
-section, aside{
+/* ==================================== */
+/*
+nav ul li input[type=checkbox]:checked section{
+  color: red;
   border: 1px solid red;
 }
+/**/
