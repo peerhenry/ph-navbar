@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js && start chrome ./index.html"
+    "start": "start chrome ./index.html",
+    "dev": "node server.js && start chrome localhost:8080"
   },
   "keywords": [],
   "author": "",
